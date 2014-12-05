@@ -19,8 +19,6 @@ $ npm install -g bower
 
 ### Install local
 ```
-$ npm install
-$ bower install
 $ bower install underscore
 $ bower install backbone
 $ bower install jquery
