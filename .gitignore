@@ -1,0 +1,8 @@
+node_modules
+bower_components
+npm-debug.log
+.DS_Store
+app/lib
+DesarrolloAgilBackbone.sublime-project
+DesarrolloAgilBackbone.sublime-workspace
+dist

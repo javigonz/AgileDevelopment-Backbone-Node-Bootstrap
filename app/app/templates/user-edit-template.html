@@ -1,0 +1,23 @@
+<form class="user-edit-form" role="form">
+              <legend><%= user ? 'Edit User' : 'Add User'%></legend>
+              <div class="form-group">
+                <label >First Name</label>
+                <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Enter first name" value="<%= user ? user.get('firstname') : '' %>">
+              </div>
+              <div class="form-group">
+                <label >Last Name</label>
+                <input type="text" class="form-control" id="lastname" name="lastname" placeholder="Enter last name" value="<%= user ? user.get('lastname') : '' %>">
+              </div>
+              <div class="form-group">
+                <label >Age</label>
+                <input type="number" class="form-control" id="age" name="age" placeholder="Enter age" value="<%= user ? user.get('age') : '' %>">
+              </div>
+                
+              
+              <button  type="submit" class="btn btn-success"><%= user ? 'Change User' : 'Add User'%></button>
+
+              <% if (user) { %>
+                  <input type="hidden" name="id" value="<%= user.id %>" />
+                  <button type="button" class="btn btn-danger delete">Delete</button>
+              <% }; %> 
+</form>
