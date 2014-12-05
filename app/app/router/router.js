@@ -1,6 +1,6 @@
 // Router
 // ----------------
-define(["jquery", "backbone",'app/views/UserList','app/views/EditUser'],
+define(['jquery', 'backbone','app/views/UserList','app/views/EditUser'],
 
     function($, Backbone, UserList, EditUser) {
 

@@ -31,6 +31,12 @@ Packege.json -> Dependencies
 
 ```
 
+Gulpfile.js tasks
+- When there are changes in HTML, then browser it reload automatic
+- Look for errors in js scripts and show its
+- Developer server config
+- Include libs installed by Bower
+
 ### Development mode
 ```
 $ gulp
