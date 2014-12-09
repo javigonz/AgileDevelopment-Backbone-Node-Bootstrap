@@ -1,6 +1,6 @@
 // View UserList
 // -------------------------------
-define(["jquery", "backbone", "app/collections/Users"],
+define(['jquery', 'backbone', 'app/collections/Users'],
 
     function($, Backbone, Users){
 
@@ -9,13 +9,13 @@ define(["jquery", "backbone", "app/collections/Users"],
             template: 'user-list-template',
 
             // The DOM Element associated with this view
-            el: ".content",
+            el: '.content',
 
             // View constructor
             initialize: function() {
                 // Calls the template
                 var that = this;
-                $.get("app/templates/" + 'user-list-template' + ".html", function(template){
+                $.get('app/templates/' + 'user-list-template' + '.html', function(template){
                           that.myTemplate = _.template($('#user-list-template').html() + template);
                 });
 

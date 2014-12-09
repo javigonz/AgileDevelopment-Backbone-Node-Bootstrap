@@ -1,6 +1,6 @@
 // Model User
 // --------------------------------
-define(["jquery", "backbone"],
+define(['jquery', 'backbone'],
 
     function($, Backbone) {
 
@@ -21,7 +21,7 @@ define(["jquery", "backbone"],
 
 
             // Gets called automatically by Backbone when the set and/or save methods are called (Add your own logic)
-            validate: function(attrs) {
+            validate: function() {
 
             }
 

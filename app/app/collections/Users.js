@@ -1,6 +1,6 @@
 // Collection Users
 // ---------------------
-define(["jquery","backbone","app/models/User"],
+define(['jquery','backbone','app/models/User'],
 
   function($, Backbone, User) {
 

@@ -1,6 +1,6 @@
 // View EditUser
 // -------------------------------
-define(["jquery", "backbone", "app/models/User"],
+define(['jquery', 'backbone', 'app/models/User'],
 
     function($, Backbone, User){
 
@@ -11,14 +11,14 @@ define(["jquery", "backbone", "app/models/User"],
             template: 'user-edit-template',
 
             // The DOM Element associated with this view
-            el: ".content",
+            el: '.content',
 
             // View constructor
             initialize: function() {
 
                // Calls the template
                 var that = this;
-                $.get("app/templates/" + 'user-edit-template' + ".html", function(template){
+                $.get('app/templates/' + 'user-edit-template' + '.html', function(template){
                           that.myTemplate = _.template($('#user-edit-template').html() + template);
                 });
 
@@ -41,7 +41,7 @@ define(["jquery", "backbone", "app/models/User"],
                         success: function (user) {  
                             that.$el.html(that.myTemplate({user: user}));
                         }
-                    })
+                    });
                 }
                 //New User
                 else {
@@ -55,19 +55,19 @@ define(["jquery", "backbone", "app/models/User"],
                 var userDetails = $(ev.currentTarget).serializeObject();
                 var user = new User();
                 user.save(userDetails, {
-                    success: function (user){
+                    success: function (){
                         //router.navigate('', {trigger: true}); 
                     }
                 });
                 return false;
             },
 
-            deleteUser: function (ev){
+            deleteUser: function (){
                 this.user.destroy({
                     success: function(){
                         //router.navigate('', {trigger: true});
                     }
-                })
+                });
             },
         });
 
